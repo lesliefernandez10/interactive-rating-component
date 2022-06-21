@@ -5,12 +5,11 @@ import SubmitCard from "./components/SubmitCard.vue";
 
 <template>
   <main>
-    <MainCard></MainCard>
-    <SubmitCard
-      :rating="rating"
-      @submit-rating-selected="submitRating"
-      v-show="isVisible"
-    ></SubmitCard>
+    <MainCard
+      @rating-selected="passRating"
+      @rating-submitted="cardVisible"
+    ></MainCard>
+    <SubmitCard :rating="rating" v-show="isVisible"></SubmitCard>
   </main>
 </template>
 
@@ -22,13 +21,14 @@ export default {
       isVisible: false,
     };
   },
-  // methods: {
-  //   submitRating() {
-  //     this.rating = 1;
-  //     this.isVisible = !this.isVisible;
-  //     console.log("You submitted your rating!");
-  //   },
-  // },
+  methods: {
+    passRating(rating) {
+      this.rating = rating;
+    },
+    cardVisible() {
+      this.isVisible = true;
+    },
+  },
 };
 </script>
 

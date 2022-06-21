@@ -20,6 +20,9 @@ export default {
     rating: {
       type: Number,
     },
+    isVisible: {
+      type: Boolean,
+    },
   },
 };
 </script>

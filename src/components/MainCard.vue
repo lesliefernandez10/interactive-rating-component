@@ -12,45 +12,14 @@
       <button
         type="button"
         class="rating-btn"
-        :value="1"
-        @click="ratingSelected"
+        @click="selectRating"
+        v-for="(number, index) in ratings"
+        :key="index"
       >
-        1
-      </button>
-      <button
-        type="button"
-        class="rating-btn"
-        :value="2"
-        @click="ratingSelected"
-      >
-        2
-      </button>
-      <button
-        type="button"
-        class="rating-btn"
-        :value="3"
-        @click="ratingSelected"
-      >
-        3
-      </button>
-      <button
-        type="button"
-        class="rating-btn"
-        :value="4"
-        @click="ratingSelected"
-      >
-        4
-      </button>
-      <button
-        type="button"
-        class="rating-btn"
-        :value="5"
-        @click="ratingSelected"
-      >
-        5
+        {{ number.rating }}
       </button>
     </div>
-    <button class="submit-btn" @click="submitRating">Submit</button>
+    <button class="submit-btn" @click.prevent="submitRating">Submit</button>
   </div>
 </template>
 
@@ -58,18 +27,23 @@
 export default {
   data() {
     return {
-      rating: 1,
+      ratings: [
+        { rating: 1 },
+        { rating: 2 },
+        { rating: 3 },
+        { rating: 4 },
+        { rating: 5 },
+      ],
     };
   },
   methods: {
-    ratingSelected(e) {
-      console.log(Number(e.target.value));
+    selectRating(ratings) {
+      const index = ratings.target.__vnode.key; // only way I found to make the index dynamic
+      this.$emit("rating-selected", this.ratings[index].rating);
     },
-    // submitRating() {
-    //   console.log(this.ratingSelected());
-    //   this.$emit("submit-rating-selected");
-    //   console.log("Emmited the rating?");
-    // },
+    submitRating() {
+      this.$emit("rating-submitted");
+    },
   },
 };
 </script>
