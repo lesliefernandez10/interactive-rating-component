@@ -1,0 +1,22 @@
+:root {
+  --accent-color: #fb7413;
+  --white: #ffffff;
+  --light-grey: #818996;
+  --medium-grey: #262F38;
+  --dark-blue: #1F2630;
+  --very-dark-blue: #121417;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Overpass', sans-serif;
+}
