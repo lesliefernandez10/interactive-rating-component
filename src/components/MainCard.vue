@@ -61,31 +61,31 @@ export default {
 .main-card {
   display: flex;
   flex-direction: column;
-  width: 326px;
-  height: 358px;
-  padding: 22px 24px 31px;
+  width: 32.6rem;
+  height: 35.8rem;
+  padding: 2.2rem 2.4rem 3.1rem;
   background: var(--dark-blue);
-  border-radius: 15px;
+  border-radius: 1.5rem;
 }
 
 .star-icon {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 18px;
-  padding: 12px;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1.8rem;
+  padding: 1.2rem;
   border-radius: 50%;
   background: var(--medium-grey);
 }
 
 .main-card__title {
-  margin-bottom: 11px;
+  margin-bottom: 1.1rem;
   font-size: 2.4rem;
   font-weight: 700;
   color: var(--white);
 }
 
 .main-card__description {
-  margin-bottom: 27px;
+  margin-bottom: 2.7rem;
   font-size: 1.4rem;
   line-height: 2.2rem;
   color: var(--light-grey);
@@ -95,15 +95,15 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 17px;
-  width: 280px;
-  height: 40px;
-  margin-bottom: 24px;
+  gap: 1.7rem;
+  width: 28rem;
+  height: 4rem;
+  margin-bottom: 2.4rem;
 }
 
 .rating__btn {
-  width: 42px;
-  height: 42px;
+  width: 4.2rem;
+  height: 4.2rem;
   border-radius: 50%;
   border: none;
   background: var(--medium-grey);
@@ -114,13 +114,13 @@ export default {
 .rating__btn:focus {
   background: var(--accent-color);
   color: var(--white);
-  outline: 0.5px solid var(--accent-color);
+  outline: 0.05rem solid var(--accent-color);
 }
 
 .submit__btn {
-  width: 279px;
-  height: 45px;
-  border-radius: 25px;
+  width: 27.9rem;
+  height: 4.5rem;
+  border-radius: 2.5rem;
   border: none;
   background: var(--accent-color);
   font-size: 1.4rem;
@@ -154,17 +154,17 @@ export default {
 
 @media screen and (min-width: 425px) {
   .main-card {
-    width: 412px;
-    height: 414px;
-    padding: 32px 39px 30px 30px;
-    border-radius: 30px;
+    width: 41.2rem;
+    height: 41.4rem;
+    padding: 3.2rem 3.9rem 3rem 3rem;
+    border-radius: 3rem;
   }
 
   .star-icon {
-    width: 49px;
-    height: 49px;
-    margin-bottom: 30px;
-    padding: 16px;
+    width: 4.9rem;
+    height: 4.9rem;
+    margin-bottom: 3rem;
+    padding: 1.6rem;
   }
 
   .main-card__title {
@@ -177,20 +177,20 @@ export default {
   }
 
   .rating {
-    gap: 22px;
-    width: 341px;
-    height: 51px;
-    margin-bottom: 32px;
+    gap: 2.2rem;
+    width: 34.1rem;
+    height: 5.1rem;
+    margin-bottom: 3.2rem;
   }
 
   .rating__btn {
-    width: 51px;
-    height: 51px;
+    width: 5.1rem;
+    height: 5.1rem;
     font-size: 1.5rem;
   }
 
   .submit__btn {
-    width: 341px;
+    width: 34.1rem;
     font-size: 1.5rem;
   }
 }

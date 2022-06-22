@@ -36,16 +36,16 @@ export default {
 }
 
 .submit-card__illustration {
-  margin-top: 10px;
-  margin-bottom: 22px;
+  margin-top: 1rem;
+  margin-bottom: 2.2rem;
 }
 
 .submit-card__rating {
-  width: 167px;
-  height: 32px;
-  padding: 9px;
-  margin-bottom: 27px;
-  border-radius: 25px;
+  width: 16.7rem;
+  height: 3.2rem;
+  padding: 0.9rem;
+  margin-bottom: 2.7rem;
+  border-radius: 2.5rem;
   background: var(--medium-grey);
   font-size: 1.4rem;
   letter-spacing: 0.01rem;
@@ -54,7 +54,7 @@ export default {
 }
 
 .submit-card__title {
-  margin-bottom: 14px;
+  margin-bottom: 1.4rem;
 }
 
 .submit-card__description {
@@ -64,13 +64,13 @@ export default {
 
 @media screen and (min-width: 425px) {
   .submit-card__illustration {
-    margin-top: 13px;
-    margin-bottom: 32px;
+    margin-top: 1.3rem;
+    margin-bottom: 3.2rem;
   }
 
   .submit-card__rating {
-    width: 192px;
-    margin-bottom: 34px;
+    width: 19.2rem;
+    margin-bottom: 3.4rem;
     font-size: 1.5rem;
     letter-spacing: 0;
   }
