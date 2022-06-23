@@ -12,11 +12,11 @@
       <button
         type="button"
         class="rating__btn"
-        @click="selectRating"
-        v-for="(number, index) in ratings"
+        @click="selectRating(rate)"
+        v-for="(rate, index) in ratings"
         :key="index"
       >
-        {{ number.rating }}
+        {{ rate.rating }}
       </button>
     </div>
     <button
@@ -61,9 +61,8 @@ export default {
     };
   },
   methods: {
-    selectRating(ratings) {
-      const index = ratings.target.__vnode.key; // only way I found to make the index dynamic
-      this.rating = this.ratings[index].rating;
+    selectRating(rate) {
+      this.rating = rate.rating;
       this.isBtnDisabled = false;
     },
     submitRating() {
